@@ -1,56 +1,85 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xl-8 mb-5 mb-xl-0">
-          <div class="card bg-gradient-default shadow">
-            <div class="card-header bg-transparent">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h6 class="text-uppercase text-light ls-1 mb-1">Club Financial Report</h6>
-                  <h2 class="text-white mb-0">Sales value</h2>
-                </div>
-                <div class="col">
-                  <ul class="nav nav-pills justify-content-end">
-                    <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales"  (click)="data=datasets[0];updateOptions()">
-                      <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked===true}" data-toggle="tab" (click)="clicked=true;clicked1=false">
-                        <span class="d-none d-md-block">Month</span>
-                        <span class="d-md-none">M</span>
-                      </a>
-                    </li>
-                    <li class="nav-item" data-toggle="chart" data-target="#chart-sales"  (click)="data=datasets[1];updateOptions()">
-                      <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked1===true}" data-toggle="tab" (click)="clicked=false;clicked1=true">
-                        <span class="d-none d-md-block">Annual</span>
-                        <span class="d-md-none">A</span>
-                      </a>
-                  </ul>
-                </div>
-                  </div>
-            </div>
-            <div class="card-body">
-              <!-- Chart -->
-              <div class="chart">
-                <!-- Chart wrapper -->
-                <canvas id="chart-sales" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="card shadow">
-            <div class="card-header bg-transparent">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h6 class="text-uppercase text-muted ls-1 mb-1">Daily Performance</h6>
-                  <h2 class="mb-0">Total orders</h2>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <!-- Chart -->
-              <div class="chart">
-                <canvas id="chart-orders" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="table-responsive" >
+  <!-- Projects table -->
+  <table class="table align-items-center table-flush">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Member name</th>
+        <th scope="col">Member status</th>
+        <th scope="col">Membership Subscription</th>
+        <th scope="col">Membership Contribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+        Adebayo Tanbus
+        </th>
+        <td class="text-success">
+          Active
+        </td>
+        <td>
+          Premium 
+        </td>
+        <td>
+          <i class="fas fa-arrow-up text-success mr-3"></i> 46.53%
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Mohammed Danzel
+        </th>
+        <td class="text-success">
+        Active
+        </td>
+        <td>
+          Executive
+        </td>
+        <td>
+          <i class="fas fa-arrow-down text-warning mr-3"></i> 10.53%
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Adamu Khaleel
+        </th>
+        <td class="text-success">
+         Active
+        </td>
+        <td>
+          New
+        </td>
+        <td>
+          <i class="fas fa-arrow-down text-warning mr-3"></i> 36.49%
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Haruna Ishola
+        </th>
+        <td class="text-danger">
+         Dormant 
+        </td>
+        <td>
+          Premium
+        </td>
+        <td>
+          <i class="fas fa-arrow-up text-success mr-3"></i> 50.87%
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Chinedu Okafor
+        </th>
+        <td class="text-success">
+         Active
+        </td>
+        <td>
+          Executive
+        </td>
+        <td>
+          <i class="fas fa-arrow-up text-danger mr-3"></i> 26.53%
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
